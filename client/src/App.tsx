@@ -1,9 +1,15 @@
 import "./App.css";
 import * as React from "react";
 import { FunctionComponent } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const App: FunctionComponent = () => {
-  return <div className="App"></div>;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/"></Route>
+      </Routes>
+    </BrowserRouter>
+  );
 };
-
 export default App;
