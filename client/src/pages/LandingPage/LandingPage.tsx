@@ -1,14 +1,14 @@
 import "bulma/css/bulma.min.css";
 import * as React from "react";
 import { FunctionComponent } from "react";
-import { Button } from "react-bulma-components";
+import { Button, Container, Heading } from "react-bulma-components";
 
 const LandingPage: FunctionComponent = () => {
   return (
-    <div>
-      <h1>BlogChat</h1>
+    <Container>
+      <Heading size={1}>BlogChat</Heading>
       <Button>hi</Button>
-    </div>
+    </Container>
   );
 };
 
