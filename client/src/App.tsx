@@ -1,4 +1,5 @@
 import "./App.css";
+import CreateAccountPage from "./pages/CreateAccountPage/CreateAccountPage";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import * as React from "react";
 import { FunctionComponent } from "react";
@@ -9,6 +10,7 @@ const App: FunctionComponent = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        <Route path="/create-account" element={<CreateAccountPage />} />
       </Routes>
     </BrowserRouter>
   );
