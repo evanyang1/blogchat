@@ -1,28 +1,45 @@
 import "./LandingPage.css";
 import "bulma/css/bulma.min.css";
 import * as React from "react";
-import { FunctionComponent } from "react";
+import { FunctionComponent, useState } from "react";
 import { Button, Form, Heading } from "react-bulma-components";
 import { Link } from "react-router-dom";
 
 const { Input, Field, Control, Label } = Form;
 
 const LandingPage: FunctionComponent = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   return (
     <div className="div1">
       <Heading size={1}>BlogChat</Heading>
       <div className="login">
         <Heading size={3}>Log in</Heading>
         <Field>
-          <Label>Username</Label>
+          <Label>Email</Label>
           <Control>
-            <Input placeholder="e.g. John Doe" type="text" />
+            <Input
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+              placeholder="e.g. abc@gmail.com"
+              type="text"
+              value={email}
+            />
           </Control>
         </Field>
         <Field>
           <Label>Password</Label>
           <Control>
-            <Input placeholder="password" type="password" />
+            <Input
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
+              placeholder="password"
+              type="password"
+              value={password}
+            />
           </Control>
         </Field>
 
